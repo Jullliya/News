@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="good_morning_fragment_home">Good Morning</string>
+    <string name="date_fragment_home">Sat 14 September, 2024</string>
+    <string name="weather_fragment_home">Sunny 32oC</string>
+    <string name="weather_emoji_fragment_home">☀️</string>
+</resources>
