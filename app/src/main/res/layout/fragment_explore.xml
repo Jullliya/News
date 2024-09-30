@@ -39,49 +39,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlSymmetry" />
 
-    <View
-        android:id="@+id/bottom_navigation_bar"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/bottom_bar_rounded_rectangle"
-        android:backgroundTint="#CCFCE9EE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btn_menu_home_fragment_explore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_menu_home"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toStartOf="@id/btn_menu_explore_fragment_explore"
-        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"
-        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
-
-    <ImageButton
-        android:id="@+id/btn_menu_explore_fragment_explore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_menu_explore_pressed"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"
-        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"
-        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
-
-    <ImageButton
-        android:id="@+id/btn_menu_bookmark_fragment_explore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_menu_bookmark"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"
-        app:layout_constraintStart_toEndOf="@id/btn_menu_explore_fragment_explore"
-        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
-
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chip_article"
         android:layout_width="wrap_content"

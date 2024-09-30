@@ -25,7 +25,7 @@ class ArticleHomeFragmentAdapter(private val articleList: List<Article>) :
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
             val view = LayoutInflater.from(parent.context).inflate(
-                R.layout.fragment_home , parent, false
+                R.layout.item_article_fragment_home, parent, false
             )
             return ArticleViewHolder(view)
         }

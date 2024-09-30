@@ -8,13 +8,11 @@
 
     <TextView
         android:id="@+id/tv_item_article_card_title"
-        android:layout_width="238dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="128dp"
         android:fontFamily="@font/inter_medium"
-        android:paddingEnd="16dp"
         android:text="@string/article_title_fragment_home"
         android:textColor="#231F20"
         android:textSize="18sp"
@@ -41,14 +39,13 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toEndOf="@id/tv_item_article_card_title"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_item_article_card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:importantForAccessibility="no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/article_card_1" />
     </androidx.cardview.widget.CardView>

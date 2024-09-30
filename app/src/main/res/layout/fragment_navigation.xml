@@ -16,61 +16,16 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/nav_view"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/nav_graph" />
-
-    <!--    <View-->
-<!--        android:id="@+id/bottom_navigation_bar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="80dp"-->
-<!--        android:background="@drawable/bottom_bar_rounded_rectangle"-->
-<!--        android:backgroundTint="#CCFCE9EE"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--    <ImageButton-->
-<!--        android:id="@+id/ic_menu_home"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="#00FFFFFF"-->
-<!--        android:src="@drawable/ic_menu_home"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintEnd_toStartOf="@id/ic_menu_explore"-->
-<!--        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />-->
-
-<!--    <ImageButton-->
-<!--        android:id="@+id/ic_menu_explore"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="#00FFFFFF"-->
-<!--        android:src="@drawable/ic_menu_explore"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />-->
-
-<!--    <ImageButton-->
-<!--        android:id="@+id/ic_menu_bookmark"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="#00FFFFFF"-->
-<!--        android:src="@drawable/ic_menu_bookmark"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"-->
-<!--        app:layout_constraintStart_toEndOf="@id/ic_menu_explore"-->
-<!--        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,18 +1,22 @@
 package dev.jullls.news.presentation.ui.explore_fragment
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.news.R
 import dev.jullls.news.databinding.FragmentExploreBinding
+import dev.jullls.news.databinding.FragmentHomeBinding
 import dev.jullls.news.presentation.ui.Article
 
 class ExploreFragment: Fragment(R.layout.fragment_explore) {
 
-    private lateinit var binding: FragmentExploreBinding
+    private var _binding: FragmentExploreBinding? = null
+    private val binding get() = _binding!!
 
     private val articleListExplore = listOf(
         Article(
@@ -49,6 +53,16 @@ class ExploreFragment: Fragment(R.layout.fragment_explore) {
         )
     )
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentExploreBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
@@ -56,14 +70,14 @@ class ExploreFragment: Fragment(R.layout.fragment_explore) {
     }
 
     private fun setupListeners() {
-        with(binding) {
-            btnMenuHomeFragmentExplore.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_explore_to_navigation_home)
-            }
-            btnMenuBookmarkFragmentExplore.setOnClickListener{
-                findNavController().navigate(R.id.action_navigation_explore_to_navigation_bookmark)
-            }
-        }
+//        with(binding) {
+//            btnMenuHomeFragmentExplore.setOnClickListener {
+//                findNavController().navigate(R.id.action_navigation_explore_to_navigation_home)
+//            }
+//            btnMenuBookmarkFragmentExplore.setOnClickListener{
+//                findNavController().navigate(R.id.action_navigation_explore_to_navigation_bookmark)
+//            }
+//        }
     }
 
     private fun setupUI(){
@@ -77,5 +91,10 @@ class ExploreFragment: Fragment(R.layout.fragment_explore) {
                 LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
             rvArticlesExplore.adapter = ArticleExploreFragmentAdapter(articleListExplore)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
