@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_bookmark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:background="#E9EEFA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Bookmark"
+        android:textColor="#231F20"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/pen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_articles_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:scrollbarSize="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintVertical_bias="0.008"
+        tools:context=".presentation.ui.main_activity.MainActivity"
+        tools:ignore="RtlSymmetry"
+        tools:listitem="@layout/item_article_fragment_bookmark" />
+
+    <View
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_bar_rounded_rectangle"
+        android:backgroundTint="#CCFCE9EE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_menu_home_fragment_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_menu_home"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
+        app:layout_constraintEnd_toStartOf="@id/btn_menu_explore_fragment_bookmark"
+        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"
+        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
+
+    <ImageButton
+        android:id="@+id/btn_menu_explore_fragment_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_menu_explore"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
+        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"
+        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"
+        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
+
+    <ImageButton
+        android:id="@+id/btn_menu_bookmark_fragment_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_menu_bookmark_pressed"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
+        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"
+        app:layout_constraintStart_toEndOf="@id/btn_menu_explore_fragment_bookmark"
+        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
