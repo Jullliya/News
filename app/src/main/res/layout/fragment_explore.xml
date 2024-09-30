@@ -7,10 +7,10 @@
     android:layout_height="match_parent">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_explore"
         android:layout_width="wrap_content"
         android:layout_height="68dp"
-        android:background="#E9EEFA"
+        android:background="@color/fragment_top_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,10 +20,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/inter_semibold"
-        android:text="Explore"
-        android:textColor="#231F20"
+        android:text="@string/explore_title"
+        android:textColor="@color/fragment_title"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view_explore"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:paddingEnd="32dp"
         android:searchIcon="@drawable/ic_search_fragment_home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view_explore"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlSymmetry" />
 
@@ -49,7 +49,7 @@
         android:scrollbars="horizontal"
         app:chipSpacingHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view">
+        app:layout_constraintTop_toBottomOf="@id/view_explore">
 
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
@@ -57,15 +57,15 @@
             android:elegantTextHeight="false"
             android:fontFamily="@font/inter_semibold"
             android:freezesText="false"
-            android:text="Travel"
-            android:textColor="#231F20"
+            android:text="@string/chip_group_travel"
+            android:textColor="@color/explore_chip_text"
             android:textSize="14sp"
             app:chipCornerRadius="56dp"
             app:chipEndPadding="24dp"
             app:chipMinHeight="32dp"
             app:chipMinTouchTargetSize="32dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#E9EEFA"
+            app:chipStrokeColor="@color/explore_chip_stroke"
             app:textEndPadding="0dp"
             app:textStartPadding="0dp"
             tools:ignore="SmallSp" />
@@ -76,15 +76,15 @@
             android:elegantTextHeight="false"
             android:fontFamily="@font/inter_semibold"
             android:freezesText="false"
-            android:text="Technology"
-            android:textColor="#231F20"
+            android:text="@string/explore_chip_technology"
+            android:textColor="@color/explore_chip_text"
             android:textSize="14sp"
             app:chipCornerRadius="56dp"
             app:chipEndPadding="24dp"
             app:chipMinHeight="32dp"
             app:chipMinTouchTargetSize="32dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#E9EEFA"
+            app:chipStrokeColor="@color/explore_chip_stroke"
             app:textEndPadding="0dp"
             app:textStartPadding="0dp"
             tools:ignore="SmallSp" />
@@ -95,15 +95,15 @@
             android:elegantTextHeight="false"
             android:fontFamily="@font/inter_semibold"
             android:freezesText="false"
-            android:text="Business"
-            android:textColor="#231F20"
+            android:text="@string/explore_chip_business"
+            android:textColor="@color/explore_chip_text"
             android:textSize="14sp"
             app:chipCornerRadius="56dp"
             app:chipEndPadding="24dp"
             app:chipMinHeight="32dp"
             app:chipMinTouchTargetSize="32dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#E9EEFA"
+            app:chipStrokeColor="@color/explore_chip_stroke"
             app:textEndPadding="0dp"
             app:textStartPadding="0dp"
             tools:ignore="SmallSp" />
@@ -114,15 +114,15 @@
             android:elegantTextHeight="false"
             android:fontFamily="@font/inter_semibold"
             android:freezesText="false"
-            android:text="Entertainment"
-            android:textColor="#231F20"
+            android:text="@string/explore_chip_entertainment"
+            android:textColor="@color/explore_chip_text"
             android:textSize="14sp"
             app:chipCornerRadius="56dp"
             app:chipEndPadding="24dp"
             app:chipMinHeight="32dp"
             app:chipMinTouchTargetSize="32dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#E9EEFA"
+            app:chipStrokeColor="@color/explore_chip_stroke"
             app:textEndPadding="0dp"
             app:textStartPadding="0dp"
             tools:ignore="SmallSp" />
@@ -152,24 +152,24 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/tv_article_fragment_explore"
+        android:id="@+id/tv_article_title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Uncovering the Hidden Gems of the Amazon Forestarticle_title_fragment_home"
-        android:textColor="#231F20"
+        android:text="@string/tv_article_title"
+        android:textColor="@color/explore_article_title"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/iv_author_card"
+        app:layout_constraintBottom_toTopOf="@id/iv_author_portrait"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_article"
         tools:ignore="NotSibling" />
 
     <ImageView
-        android:id="@+id/iv_author_card"
+        android:id="@+id/iv_author_portrait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -178,19 +178,20 @@
         android:background="@drawable/author_round"
         android:src="@drawable/author_card_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_article_fragment_explore" />
+        app:layout_constraintTop_toBottomOf="@id/tv_article_title" />
 
     <TextView
+        android:id="@+id/article_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Mr. Lana Kub · May 1, 2023"
-        android:textColor="#6D6265"
+        android:text="@string/explore_article_information"
+        android:textColor="@color/article_tv_information"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/iv_author_card"
-        app:layout_constraintTop_toBottomOf="@id/tv_article_fragment_explore" />
+        app:layout_constraintStart_toEndOf="@id/iv_author_portrait"
+        app:layout_constraintTop_toBottomOf="@id/tv_article_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_articles_explore"
@@ -204,7 +205,7 @@
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_author_card"
+        app:layout_constraintTop_toBottomOf="@id/iv_author_portrait"
         app:layout_constraintVertical_bias="0.021"
         tools:context=".presentation.ui.main_activity.MainActivity"
         tools:ignore="RtlSymmetry"

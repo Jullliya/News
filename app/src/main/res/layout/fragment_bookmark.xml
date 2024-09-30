@@ -7,33 +7,35 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="68dp"
-        android:background="#E9EEFA"
+        android:background="@color/fragment_top_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tv_title_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/inter_semibold"
-        android:text="Bookmark"
-        android:textColor="#231F20"
+        android:text="@string/bookmark_title"
+        android:textColor="@color/fragment_title"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bookmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:id="@+id/ibtn_bookmark_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/pen"
+        android:background="@color/article_iv_background"
+        android:src="@drawable/ic_bookmark_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,7 +51,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/view_bookmark"
         app:layout_constraintVertical_bias="0.008"
         tools:context=".presentation.ui.main_activity.MainActivity"
         tools:ignore="RtlSymmetry"

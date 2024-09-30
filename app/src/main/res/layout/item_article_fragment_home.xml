@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/inter_medium"
         android:text="@string/article_title_fragment_home"
-        android:textColor="#231F20"
+        android:textColor="@color/article_tv_title"
         android:textSize="24sp" />
 
     <TextView
@@ -44,5 +44,5 @@
         android:textSize="14sp"
         android:fontFamily="@font/inter"
         android:text="@string/item_article_card_section"
-        android:textColor="#6D6265"/>
+        android:textColor="@color/article_tv_information"/>
 </LinearLayout>

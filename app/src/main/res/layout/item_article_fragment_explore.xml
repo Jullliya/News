@@ -16,22 +16,23 @@
         android:layout_gravity="center"
         android:fontFamily="@font/inter_medium"
         android:text="@string/article_title_fragment_home"
-        android:textColor="#231F20"
+        android:textColor="@color/article_tv_title"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/iv_item_article_card"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="NotSibling" />
+        tools:ignore="NotSibling,RtlSymmetry" />
 
     <ImageView
-        android:id="@+id/iv_author_card"
+        android:id="@+id/iv_author_portrait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:background="@drawable/author_round"
-        android:src="@drawable/author_ellips"
+        android:src="@drawable/article_author_portrait"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_item_article_card_title" />
+        app:layout_constraintTop_toBottomOf="@id/tv_item_article_card_title"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_information"
@@ -40,10 +41,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Harry Harper · Apr 12, 2023"
-        android:textColor="#6D6265"
+        android:text="@string/item_article_explore_information"
+        android:textColor="@color/article_tv_information"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/iv_author_card"
+        app:layout_constraintStart_toEndOf="@id/iv_author_portrait"
         app:layout_constraintTop_toBottomOf="@id/tv_item_article_card_title" />
 
     <androidx.cardview.widget.CardView
