@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.news.R
 import dev.jullls.news.databinding.FragmentExploreBinding
-import dev.jullls.news.databinding.FragmentHomeBinding
 import dev.jullls.news.presentation.ui.Article
 
 class ExploreFragment: Fragment(R.layout.fragment_explore) {
@@ -57,7 +55,7 @@ class ExploreFragment: Fragment(R.layout.fragment_explore) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -70,14 +68,7 @@ class ExploreFragment: Fragment(R.layout.fragment_explore) {
     }
 
     private fun setupListeners() {
-//        with(binding) {
-//            btnMenuHomeFragmentExplore.setOnClickListener {
-//                findNavController().navigate(R.id.action_navigation_explore_to_navigation_home)
-//            }
-//            btnMenuBookmarkFragmentExplore.setOnClickListener{
-//                findNavController().navigate(R.id.action_navigation_explore_to_navigation_bookmark)
-//            }
-//        }
+
     }
 
     private fun setupUI(){

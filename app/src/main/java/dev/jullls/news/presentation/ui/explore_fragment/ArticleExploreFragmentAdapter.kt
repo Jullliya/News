@@ -16,9 +16,9 @@ class ArticleExploreFragmentAdapter(private val articleList: List<Article>) :
 
         fun bind(article: Article) {
             with(binding) {
-                ivItemArticleCard.setImageResource(R.drawable.article_card_1)
+                ivItemArticleCard.setImageResource(article.image)
                 tvItemArticleCardTitle.text = article.name
-                ivAuthorPortrait.setImageResource(R.drawable.article_author_portrait)
+                ivAuthorPortrait.setImageResource(article.author)
                 tvInformation.text = article.information
             }
         }
@@ -26,7 +26,7 @@ class ArticleExploreFragmentAdapter(private val articleList: List<Article>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.fragment_explore, parent, false
+            R.layout.item_article_fragment_explore, parent, false
         )
         return ArticleViewHolder(view)
     }

@@ -5,27 +5,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.news.R
-import dev.jullls.news.databinding.ItemArticleFragmentExploreBinding
+import dev.jullls.news.databinding.ItemArticleFragmentBookmarkBinding
 import dev.jullls.news.presentation.ui.Article
 
 class ArticleBookmarkFragmentAdapter(private val articleList: List<Article>) :
     RecyclerView.Adapter<ArticleBookmarkFragmentAdapter.ArticleViewHolder>() {
 
     class ArticleViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val binding = ItemArticleFragmentExploreBinding.bind(view)
+        private val binding = ItemArticleFragmentBookmarkBinding.bind(view)
 
         fun bind(article: Article) {
             with(binding) {
-                ivItemArticleCard.setImageResource(R.drawable.article_card_1)
+                ivItemArticleCard.setImageResource(article.image)
                 tvItemArticleCardTitle.text = article.name
-
+                tvInformation.text = article.section
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.fragment_bookmark, parent, false
+            R.layout.item_article_fragment_bookmark, parent, false
         )
         return ArticleViewHolder(view)
     }

@@ -5,15 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.news.R
 import dev.jullls.news.databinding.FragmentBookmarkBinding
-import dev.jullls.news.databinding.FragmentExploreBinding
-import dev.jullls.news.databinding.FragmentHomeBinding
 import dev.jullls.news.presentation.ui.Article
-import dev.jullls.news.presentation.ui.explore_fragment.ArticleExploreFragmentAdapter
+
 
 class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
 
@@ -91,7 +88,7 @@ class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentBookmarkBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -104,14 +101,6 @@ class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
     }
 
     private fun setupListeners() {
-//        with(binding) {
-//            btnMenuHomeFragmentBookmark.setOnClickListener {
-//                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_home)
-//            }
-//            btnMenuExploreFragmentBookmark.setOnClickListener{
-//                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_explore)
-//            }
-//        }
     }
 
     private fun setupUI(){
