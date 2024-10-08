@@ -18,7 +18,7 @@ class ArticleExploreFragmentAdapter(private val articleList: List<Article>) :
             with(binding) {
                 ivItemArticleCard.setImageResource(R.drawable.article_card_1)
                 tvItemArticleCardTitle.text = article.name
-                ivAuthorCard.setImageResource(R.drawable.author_ellips)
+                ivAuthorPortrait.setImageResource(R.drawable.article_author_portrait)
                 tvInformation.text = article.information
             }
         }

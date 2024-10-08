@@ -2,19 +2,32 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/container">
 
     <fragment
         android:id="@+id/container"
+        android:name="dev.jullls.news.presentation.ui.main_fragment.MainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_navigation">
+        <action
+            android:id="@+id/action_container_to_navigation_explore"
+            app:destination="@id/navigation_explore" />
+        <action
+            android:id="@+id/action_container_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_container_to_navigation_bookmark"
+            app:destination="@id/navigation_bookmark" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
         android:name="dev.jullls.news.presentation.ui.home_fragment.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_navigation_explore"
-            app:destination="@id/navigation_explore" />
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_bookmark"
-            app:destination="@id/navigation_bookmark" />
+            android:id="@+id/action_navigation_home_to_container"
+            app:destination="@id/container" />
     </fragment>
 
     <fragment
@@ -23,11 +36,8 @@
         android:label="Explore"
         tools:layout="@layout/fragment_explore" >
         <action
-            android:id="@+id/action_navigation_explore_to_navigation_home"
+            android:id="@+id/action_navigation_explore_to_container"
             app:destination="@id/container" />
-        <action
-            android:id="@+id/action_navigation_explore_to_navigation_bookmark"
-            app:destination="@id/navigation_bookmark" />
     </fragment>
 
     <fragment
@@ -36,10 +46,7 @@
         android:label="Bookmark"
         tools:layout="@layout/fragment_bookmark" >
         <action
-            android:id="@+id/action_navigation_bookmark_to_navigation_explore"
-            app:destination="@id/navigation_explore" />
-        <action
-            android:id="@+id/action_navigation_bookmark_to_navigation_home"
+            android:id="@+id/action_navigation_bookmark_to_container"
             app:destination="@id/container" />
     </fragment>
 

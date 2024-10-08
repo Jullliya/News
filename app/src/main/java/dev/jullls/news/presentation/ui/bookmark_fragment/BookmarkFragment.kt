@@ -1,19 +1,24 @@
 package dev.jullls.news.presentation.ui.bookmark_fragment
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.news.R
 import dev.jullls.news.databinding.FragmentBookmarkBinding
+import dev.jullls.news.databinding.FragmentExploreBinding
+import dev.jullls.news.databinding.FragmentHomeBinding
 import dev.jullls.news.presentation.ui.Article
 import dev.jullls.news.presentation.ui.explore_fragment.ArticleExploreFragmentAdapter
 
 class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
 
-    private lateinit var binding: FragmentBookmarkBinding
+    private var _binding: FragmentBookmarkBinding? = null
+    private val binding get() = _binding!!
 
     private val articleListBookmark = listOf(
         Article(
@@ -82,6 +87,16 @@ class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
         )
     )
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentBookmarkBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
@@ -89,14 +104,14 @@ class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
     }
 
     private fun setupListeners() {
-        with(binding) {
-            btnMenuHomeFragmentBookmark.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_home)
-            }
-            btnMenuExploreFragmentBookmark.setOnClickListener{
-                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_explore)
-            }
-        }
+//        with(binding) {
+//            btnMenuHomeFragmentBookmark.setOnClickListener {
+//                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_home)
+//            }
+//            btnMenuExploreFragmentBookmark.setOnClickListener{
+//                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_explore)
+//            }
+//        }
     }
 
     private fun setupUI(){
@@ -110,5 +125,10 @@ class BookmarkFragment: Fragment(R.layout.fragment_bookmark) {
                 LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
             rvArticlesBookmark.adapter = ArticleBookmarkFragmentAdapter(articleListBookmark)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

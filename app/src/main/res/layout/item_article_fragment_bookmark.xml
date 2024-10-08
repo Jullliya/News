@@ -8,15 +8,13 @@
 
     <TextView
         android:id="@+id/tv_item_article_card_title"
-        android:layout_width="238dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="128dp"
         android:fontFamily="@font/inter_medium"
-        android:paddingEnd="16dp"
         android:text="@string/article_title_fragment_home"
-        android:textColor="#231F20"
+        android:textColor="@color/article_tv_title"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@id/iv_item_article_card"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +23,12 @@
 
     <TextView
         android:id="@+id/tv_information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="10dp"
         android:layout_marginTop="4dp"
-        android:layout_marginBottom="5dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Travel"
-        android:textColor="#6D6265"
+        android:text="@string/item_article_bookmark_information"
+        android:textColor="@color/article_tv_information"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_item_article_card_title" />
@@ -41,19 +38,20 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toEndOf="@id/tv_item_article_card_title"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_item_article_card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:importantForAccessibility="no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/article_card_1" />
+            android:src="@drawable/article_card_1"
+            tools:ignore="ContentDescription" />
     </androidx.cardview.widget.CardView>
 
     <ImageButton
+        android:id="@+id/ibtn_bookmark_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_bookmark_fill"

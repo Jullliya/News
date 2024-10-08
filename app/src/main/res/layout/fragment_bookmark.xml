@@ -7,33 +7,35 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="68dp"
-        android:background="#E9EEFA"
+        android:background="@color/fragment_top_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tv_title_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/inter_semibold"
-        android:text="Bookmark"
-        android:textColor="#231F20"
+        android:text="@string/bookmark_title"
+        android:textColor="@color/fragment_title"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bookmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:id="@+id/ibtn_bookmark_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/pen"
+        android:background="@color/article_iv_background"
+        android:src="@drawable/ic_bookmark_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,52 +51,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/view_bookmark"
         app:layout_constraintVertical_bias="0.008"
         tools:context=".presentation.ui.main_activity.MainActivity"
         tools:ignore="RtlSymmetry"
         tools:listitem="@layout/item_article_fragment_bookmark" />
 
-    <View
-        android:id="@+id/bottom_navigation_bar"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/bottom_bar_rounded_rectangle"
-        android:backgroundTint="#CCFCE9EE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btn_menu_home_fragment_bookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_menu_home"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toStartOf="@id/btn_menu_explore_fragment_bookmark"
-        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"
-        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
-
-    <ImageButton
-        android:id="@+id/btn_menu_explore_fragment_bookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_menu_explore"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"
-        app:layout_constraintStart_toStartOf="@id/bottom_navigation_bar"
-        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
-
-    <ImageButton
-        android:id="@+id/btn_menu_bookmark_fragment_bookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_menu_bookmark_pressed"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toEndOf="@id/bottom_navigation_bar"
-        app:layout_constraintStart_toEndOf="@id/btn_menu_explore_fragment_bookmark"
-        app:layout_constraintTop_toTopOf="@id/bottom_navigation_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
