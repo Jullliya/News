@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import dev.jullls.news.R
-import dev.jullls.news.databinding.FragmentNavigationBinding
+import dev.jullls.news.databinding.FragmentMainBinding
+import dev.jullls.news.presentation.ui.bookmark_fragment.BookmarkFragment
+import dev.jullls.news.presentation.ui.explore_fragment.ExploreFragment
+import dev.jullls.news.presentation.ui.home_fragment.HomeFragment
 
-class MainFragment: Fragment(R.layout.fragment_navigation) {
 
-    private var _binding: FragmentNavigationBinding? = null
+class MainFragment: Fragment(R.layout.fragment_main) {
+
+    private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +22,7 @@ class MainFragment: Fragment(R.layout.fragment_navigation) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentNavigationBinding.inflate(inflater, container, false)
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -34,10 +37,10 @@ class MainFragment: Fragment(R.layout.fragment_navigation) {
         with(binding) {
             navView.setOnItemSelectedListener {
                 when (it.itemId) {
-                    R.id.navigation_home -> navHostFragment.findNavController().navigate(R.id.action_container_to_navigation_home)
-                    R.id.navigation_explore -> navHostFragment.findNavController().navigate(R.id.action_container_to_navigation_explore)
-                    R.id.navigation_bookmark -> navHostFragment.findNavController().navigate(R.id.action_container_to_navigation_bookmark)
-                    else -> navHostFragment.findNavController().navigate(R.id.action_container_to_navigation_home)
+                    R.id.navigation_menu_home -> replaceFragment(HomeFragment())
+                    R.id.navigation_menu_explore -> replaceFragment(ExploreFragment())
+                    R.id.navigation_menu_bookmark -> replaceFragment(BookmarkFragment())
+                    else -> replaceFragment(HomeFragment())
                 }
                 true
             }
@@ -47,5 +50,10 @@ class MainFragment: Fragment(R.layout.fragment_navigation) {
     private fun setupUi() {
 
     }
-    
+
+    private fun replaceFragment(fragment: Fragment){
+        childFragmentManager.beginTransaction()
+            .replace(R.id.nav_host_fragment, fragment)
+            .commit()
+    }
 }

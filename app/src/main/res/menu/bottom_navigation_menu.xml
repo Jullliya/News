@@ -3,17 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_menu_home"
         android:icon="@drawable/ic_menu_home"
         tools:ignore="MenuTitle" />
 
     <item
-        android:id="@+id/navigation_explore"
+        android:id="@+id/navigation_menu_explore"
         android:icon="@drawable/ic_menu_explore"
         tools:ignore="MenuTitle" />
 
     <item
-        android:id="@+id/navigation_bookmark"
+        android:id="@+id/navigation_menu_bookmark"
         android:icon="@drawable/ic_menu_bookmark"
         tools:ignore="MenuTitle" />
 
