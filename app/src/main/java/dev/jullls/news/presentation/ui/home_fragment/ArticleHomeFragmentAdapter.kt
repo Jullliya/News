@@ -16,7 +16,7 @@ class ArticleHomeFragmentAdapter(private val articleList: List<Article>) :
 
             fun bind(article: Article) {
                 with(binding) {
-                    ivItemArticleCard.setImageResource(R.drawable.article_card_1)
+                    ivItemArticleCard.setImageResource(article.image)
                     tvItemArticleCardTitle.text = article.name
                     tvItemArticleCardSection.text = article.section
                 }
