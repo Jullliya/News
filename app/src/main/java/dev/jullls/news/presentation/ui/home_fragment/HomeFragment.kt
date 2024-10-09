@@ -5,14 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.news.R
 import dev.jullls.news.databinding.FragmentHomeBinding
 import dev.jullls.news.presentation.ui.Article
 
-class HomeFragment: Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -59,7 +59,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -72,22 +72,21 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
     }
 
     private fun setupListeners() {
-//        with(binding) {
-//            btnMenuExploreFragmentHome.setOnClickListener {
-//                findNavController().navigate(R.id.action_navigation_bookmark_to_navigation_explore)
-//            }
-//            btnMenuBookmarkFragmentHome.setOnClickListener{
-//                findNavController().navigate(R.id.action_navigation_home_to_navigation_bookmark)
-//            }
-//        }
+        with(binding) {
+
+            btnSeeMoreFragmentHome.setOnClickListener {
+                view?.findNavController()
+                    ?.navigate(R.id.action_navigation_home_to_homeSeeMoreFragment)
+            }
+        }
     }
 
-    private fun setupUI(){
+    private fun setupUI() {
         setupRecyclerArticleHome()
         setupRecyclerArticleJustForYou()
     }
 
-    private fun setupRecyclerArticleHome(){
+    private fun setupRecyclerArticleHome() {
         with(binding) {
             rvArticlesHome.setHasFixedSize(true)
             rvArticlesHome.layoutManager =
@@ -96,7 +95,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun setupRecyclerArticleJustForYou(){
+    private fun setupRecyclerArticleJustForYou() {
         with(binding) {
             rvArticlesJustForYou.setHasFixedSize(true)
             rvArticlesJustForYou.layoutManager =

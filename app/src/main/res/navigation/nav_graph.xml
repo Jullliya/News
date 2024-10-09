@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="dev.jullls.news.presentation.ui.home_fragment.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_homeSeeMoreFragment"
+            app:destination="@id/homeSeeMoreFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_explore"
@@ -37,6 +41,15 @@
         <action
             android:id="@+id/action_container_to_navigation_bookmark"
             app:destination="@id/navigation_bookmark" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeSeeMoreFragment"
+        android:name="dev.jullls.news.presentation.ui.home_see_more_fragment.HomeSeeMoreFragment"
+        android:label="HomeSeeMoreFragment"
+        tools:layout="@layout/fragment_home_see_more">
+        <action
+            android:id="@+id/action_homeSeeMoreFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
 </navigation>

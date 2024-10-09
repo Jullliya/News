@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import dev.jullls.news.R
 import dev.jullls.news.databinding.FragmentMainBinding
 import dev.jullls.news.presentation.ui.bookmark_fragment.BookmarkFragment
@@ -12,7 +13,7 @@ import dev.jullls.news.presentation.ui.explore_fragment.ExploreFragment
 import dev.jullls.news.presentation.ui.home_fragment.HomeFragment
 
 
-class MainFragment: Fragment(R.layout.fragment_main) {
+class MainFragment : Fragment(R.layout.fragment_main) {
 
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
@@ -45,13 +46,14 @@ class MainFragment: Fragment(R.layout.fragment_main) {
                 true
             }
         }
+
     }
 
     private fun setupUi() {
 
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    private fun replaceFragment(fragment: Fragment) {
         childFragmentManager.beginTransaction()
             .replace(R.id.nav_host_fragment, fragment)
             .commit()
